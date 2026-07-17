@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: demo-chat-client
+  ai:
+    ollama:
+      chat:
+        model: gemma4
+        keep-alive: 0
+#      base-url: http://localhost:8090/ollama
+      base-url: http://127.0.0.1:11434
+    mcp:
+      client:
+        streamable-http:
+          connections:
+            mcp-weather:
+              url: http://localhost:8090
+              endpoint: /mcp-weather/mcp
+
+
+#              url: http://localhost:8080
+
+
+#logging:
+#  level:
+#    root: debug
